@@ -28,6 +28,31 @@ public class Robot extends TimedRobot {
     m_robotContainer = new RobotContainer();
   }
 
+  
+  // DAY 1 BELOW
+  
+  // Initialize variables
+  public String name;
+  public int age;
+
+  // Sets a new name
+  public void setName(String newName) {
+    name = newName;
+  }
+  // Returns name
+  public String getName() {
+    return name;
+  }
+  // Sets a new age
+  public void setAge(int newAge) {
+    age = newAge;
+  }
+  // Returns age
+  public int getAge() {
+    return age;
+  }
+
+
   /**
    * This function is called every 20 ms, no matter the mode. Use this for items like diagnostics
    * that you want ran during disabled, autonomous, teleoperated and test.
@@ -93,9 +118,16 @@ public class Robot extends TimedRobot {
 
   /** This function is called once when the robot is first started up. */
   @Override
-  public void simulationInit() {}
+  public void simulationInit() {
+    setAge(55);
+    setName("Aaron");
+
+    System.out.println("Age is "+getAge());
+    System.out.println("Name is "+getName());
+  }
 
   /** This function is called periodically whilst in simulation. */
   @Override
   public void simulationPeriodic() {}
+
 }
